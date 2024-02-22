@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import Logo from "../assets/SCFLOGO.png";
 import { Link } from 'react-router-dom';
 import ReorderIcon from '@mui/icons-material/Reorder';
+
 import '../styles/Navbar.css';
 
 function Navbar() {
@@ -11,12 +12,17 @@ function Navbar() {
     setOpenLinks(!openLinks)
   };
 
+
   return (
     <div className='navbar'>
       <div className='leftSide' id={openLinks ? "open" : "close"}>
         <img src={Logo} />
         <div className='hiddenLinks'>
-          <Link to="/"></Link>
+          <Link to="/">
+            <div>
+              <img src={Logo} alt='Logo' className='Logo'/>
+            </div>
+          </Link>
           <Link to="/About Us">About Us</Link>
           <Link to="/GetInvolved">Get Involved</Link>
           <Link to="/Volunteer">Volunteer</Link>
